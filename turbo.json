@@ -1,0 +1,29 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "outputs": ["dist/**", "build/**"],
+      "dependsOn": ["^build"]
+    },
+    "lint": {
+      "dependsOn": ["^build"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"]
+    },
+    "web#build": {
+      "outputs": ["apps/web/.next/**"]
+    },
+    "mobile#build": {
+      "outputs": ["apps/mobile/android/app/build/**", "apps/mobile/ios/build/**"]
+    },
+    "backend#build": {
+      "outputs": ["apps/backend/build/**", "apps/backend/target/**"]
+    }
+  }
+}
