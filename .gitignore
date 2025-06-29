@@ -1,0 +1,39 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+.pnpm-store/ # pnpm's global store, usually outside repo but good to include
+
+# Build output directories
+dist/
+build/
+.next/
+android/app/build/
+ios/build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# OS generated files
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.expo/
+*.iml
+.idea/
+.vscode/
+
+# Expo specific
+.expo/
+web-build/
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Turborepo
+.turbo/
